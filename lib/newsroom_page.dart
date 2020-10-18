@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-class GalleryPage extends StatelessWidget {
+class NewsroomPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Gallery"),
+        title: new Text("Newsroom"),
       ),
       body: CustomScrollView(
         slivers: <Widget>[
@@ -15,11 +15,10 @@ class GalleryPage extends StatelessWidget {
                 margin: EdgeInsets.only(left: 20, top: 50),
                 child: Column(
                   children: <Widget>[
-                    Text(
-                      "Deepalaya Gallery",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-                    )
+                    Text("Deepalaya Gallery",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 30),
+                        textAlign: TextAlign.center)
                   ],
                 )),
           ),

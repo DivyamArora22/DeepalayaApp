@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:login_demo/database.dart';
+import 'package:login_demo/sponsor_page.dart';
 import 'package:provider/provider.dart';
 import 'package:login_demo/data.dart';
 import 'package:flutter/foundation.dart';
@@ -9,12 +10,14 @@ import 'package:flutter/material.dart';
 import 'package:login_demo/auth.dart';
 import 'auth.dart';
 import 'package:login_demo/aboutUs_page.dart';
-import 'package:login_demo/profile_page.dart';
+import 'package:login_demo/projects_page.dart';
 import 'package:login_demo/contactUs_page.dart';
-import 'package:login_demo/gallery_page.dart';
+import 'package:login_demo/newsroom_page.dart';
 import 'package:login_demo/update_profile.dart';
 import 'package:login_demo/show_profile.dart';
 import 'donation_page.dart';
+import 'getinvolved_page.dart';
+import 'supportus_page.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({this.auth, this.onSignedOut});
@@ -86,12 +89,40 @@ class HomePage extends StatelessWidget {
                 },
               ),
               new ListTile(
-                title: new Text("Profile"),
+                title: new Text("Our Projects"),
                 leading: new Icon(Icons.person),
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).push(new MaterialPageRoute(
-                      builder: (BuildContext context) => new ProfilePage()));
+                      builder: (BuildContext context) => new ProjectsPage()));
+                },
+              ),
+              new ListTile(
+                title: new Text("Get Involved"),
+                leading: new Icon(Icons.person),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          new GetinvolvedPage()));
+                },
+              ),
+              new ListTile(
+                title: new Text("Sponsor a Child"),
+                leading: new Icon(Icons.visibility),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (BuildContext context) => new SponsorPage()));
+                },
+              ),
+              new ListTile(
+                title: new Text("Support Us"),
+                leading: new Icon(Icons.visibility),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (BuildContext context) => new SupportusPage()));
                 },
               ),
               new ListTile(
@@ -104,12 +135,12 @@ class HomePage extends StatelessWidget {
                 },
               ),
               new ListTile(
-                title: new Text("Gallery"),
+                title: new Text("Newsroom"),
                 leading: new Icon(Icons.photo),
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).push(new MaterialPageRoute(
-                      builder: (BuildContext context) => new GalleryPage()));
+                      builder: (BuildContext context) => new NewsroomPage()));
                 },
               ),
               new ListTile(
