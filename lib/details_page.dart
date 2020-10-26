@@ -36,58 +36,60 @@ class DetailsPage extends StatelessWidget {
             Expanded(
               child: Container(
                 height: 260,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            title,
-                            style: TextStyle(
-                              color: Colors.green,
-                              fontSize: 22,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            details,
-                            style: TextStyle(
-                              fontSize: 14,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Expanded(
-                          child: FlatButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            padding: EdgeInsets.symmetric(vertical: 15),
-                            color: Colors.green,
-                            child: Text(
-                              'Back',
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              title,
                               style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.green,
+                                fontSize: 22,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              details,
+                              style: TextStyle(
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: FlatButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              padding: EdgeInsets.symmetric(vertical: 15),
+                              color: Colors.green,
+                              child: Text(
+                                'Back',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 15,
-                        ),
-                      ],
-                    )
-                  ],
+                          SizedBox(
+                            width: 15,
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             )
