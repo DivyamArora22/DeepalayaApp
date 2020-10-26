@@ -20,7 +20,7 @@ class ContactUsPage extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          title: Text('Contact'),
+          title: Text('Contact Us'),
         ),
         body: SafeArea(
           child: Column(
