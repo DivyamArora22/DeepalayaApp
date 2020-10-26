@@ -48,7 +48,7 @@ class _Update_profileState extends State<Update_profile> {
                         TextField(
                           controller: statusCon,
                           decoration:
-                              InputDecoration(hintText: 'donor/student'),
+                              InputDecoration(hintText: 'Donor/Student'),
                         ),
                         RaisedButton(
                           onPressed: () async {

@@ -77,7 +77,7 @@ class HomePage extends StatelessWidget {
                           new Update_profile(auth: new Auth())));
                 },
                 child: Text('UPDATE PROFILE'),
-                color: Colors.pink,
+                color: Colors.red,
               ),
               new ListTile(
                 title: new Text("Donate"),

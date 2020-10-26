@@ -89,6 +89,12 @@ flutter:
     - images/30.jpg
     - images/sponsor.jpg
     - images/sponsor1.jpg
+    - support_images/support1.jpg
+    - support_images/support2.jpg
+    - support_images/support3.jpg
+    - support_images/support4.jpg
+    - support_images/support5.jpg
+    - support_images/support6.jpg
    
 
   # An image asset can refer to one or more resolution-specific "variants", see
