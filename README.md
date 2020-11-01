@@ -1,4 +1,4 @@
-# login_demo
+# Deepalaya
 
 A new Flutter project.
 
