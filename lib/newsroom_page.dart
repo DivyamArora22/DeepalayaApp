@@ -12,12 +12,12 @@ class NewsroomPage extends StatelessWidget {
         slivers: <Widget>[
           SliverToBoxAdapter(
             child: Container(
-                margin: EdgeInsets.only(left: 20, top: 50),
+                margin: EdgeInsets.only(left: 20, top: 20, bottom: 20),
                 child: Column(
                   children: <Widget>[
                     Text("Deepalaya Gallery",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 30),
+                            fontWeight: FontWeight.bold, fontSize: 26),
                         textAlign: TextAlign.center)
                   ],
                 )),
