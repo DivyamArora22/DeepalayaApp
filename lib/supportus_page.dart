@@ -8,6 +8,17 @@ class SupportusPage extends StatelessWidget {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("Support Us"),
+        actions: <Widget>[
+          new RaisedButton(
+            color: Colors.red,
+            child: new Text('Donate',
+                style: new TextStyle(fontSize: 17.0, color: Colors.white)),
+            onPressed: () {
+              Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) => new DonationPage()));
+            },
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(

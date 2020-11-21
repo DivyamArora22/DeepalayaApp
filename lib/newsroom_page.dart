@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'donation_page.dart';
 
 class NewsroomPage extends StatelessWidget {
   @override
@@ -7,6 +8,17 @@ class NewsroomPage extends StatelessWidget {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("Newsroom"),
+        actions: <Widget>[
+          new RaisedButton(
+            color: Colors.red,
+            child: new Text('Donate',
+                style: new TextStyle(fontSize: 17.0, color: Colors.white)),
+            onPressed: () {
+              Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) => new DonationPage()));
+            },
+          )
+        ],
       ),
       body: CustomScrollView(
         slivers: <Widget>[

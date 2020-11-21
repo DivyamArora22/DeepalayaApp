@@ -1,13 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'donation_page.dart';
 
 class SponsorPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Sponsor Us"),
+        title: new Text("Sponsor A Child"),
+        actions: <Widget>[
+          new RaisedButton(
+            color: Colors.red,
+            child: new Text('Donate',
+                style: new TextStyle(fontSize: 17.0, color: Colors.white)),
+            onPressed: () {
+              Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) => new DonationPage()));
+            },
+          )
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -32,7 +44,7 @@ class SponsorPage extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                       image: DecorationImage(
-                          image: AssetImage('assets/3.jpg'),
+                          image: AssetImage('images/31.jpg'),
                           fit: BoxFit.cover)),
                 ),
                 Container(
@@ -40,7 +52,7 @@ class SponsorPage extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                       image: DecorationImage(
-                          image: AssetImage('assets/2.jpg'),
+                          image: AssetImage('images/32.jpg'),
                           fit: BoxFit.cover)),
                 ),
                 Container(
@@ -48,7 +60,7 @@ class SponsorPage extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                       image: DecorationImage(
-                          image: AssetImage('assets/4.jpg'),
+                          image: AssetImage('images/33.jpg'),
                           fit: BoxFit.cover)),
                 ),
               ],
@@ -72,12 +84,142 @@ class SponsorPage extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(10.0),
+              padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
+              color: Colors.green,
               child: Text(
                 "As Deepalaya\’s education activities gathered pace, we were in a dilemma. The need was huge but the hands were limited. This led to the invention of the sponsorship programme based on the concept of \“Each One, Teach One\". \“Sponsor-A-Child\” establishes a one-to-one relationship between the sponsored child and sponsor parent. By sponsoring a child with Deepalaya – one of the Best NGOs in India, you can bring a significant change by educating a child in society.",
                 textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
             ),
+            Container(
+              margin: EdgeInsets.fromLTRB(10.0, 15.0, 10.0, 0),
+              child: Text(
+                "THEY TRUST US",
+                style: TextStyle(
+                  color: Colors.green,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: 15.0,
+              width: 200.0,
+              child: Divider(
+                color: Colors.red,
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(5.0),
+              child: Text(
+                "WHAT PEOPLE SAY ABOUT US",
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.grey),
+              ),
+            ),
+            CarouselSlider(
+              height: 180.0,
+              enlargeCenterPage: true,
+              autoPlay: true,
+              aspectRatio: 16 / 9,
+              autoPlayCurve: Curves.fastOutSlowIn,
+              enableInfiniteScroll: true,
+              autoPlayAnimationDuration: Duration(milliseconds: 800),
+              viewportFraction: 0.8,
+              items: [
+                Container(
+                  margin: EdgeInsets.all(5.0),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      image: DecorationImage(
+                          image: AssetImage('images/h3.jpg'),
+                          fit: BoxFit.cover)),
+                ),
+                Container(
+                  margin: EdgeInsets.all(5.0),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      image: DecorationImage(
+                          image: AssetImage('images/h4.jpg'),
+                          fit: BoxFit.cover)),
+                ),
+                Container(
+                  margin: EdgeInsets.all(5.0),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      image: DecorationImage(
+                          image: AssetImage('images/h5.jpg'),
+                          fit: BoxFit.cover)),
+                ),
+                Container(
+                  margin: EdgeInsets.all(5.0),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      image: DecorationImage(
+                          image: AssetImage('images/h6.jpg'),
+                          fit: BoxFit.cover)),
+                ),
+                Container(
+                  margin: EdgeInsets.all(5.0),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      image: DecorationImage(
+                          image: AssetImage('images/h7.jpg'),
+                          fit: BoxFit.cover)),
+                ),
+                Container(
+                  margin: EdgeInsets.all(5.0),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      image: DecorationImage(
+                          image: AssetImage('images/h8.jpg'),
+                          fit: BoxFit.cover)),
+                ),
+                Container(
+                  margin: EdgeInsets.all(5.0),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      image: DecorationImage(
+                          image: AssetImage('images/h9.jpg'),
+                          fit: BoxFit.cover)),
+                ),
+              ],
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 20.0, 0, 0),
+              child: Text(
+                "OUR IMPACT",
+                style:
+                    TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: 15.0,
+              width: 200.0,
+              child: Divider(
+                color: Colors.red,
+              ),
+            ),
+            SizedBox(height: 10.0),
+            Image(image: AssetImage("images/35.jpg")),
+            Image(image: AssetImage("images/36.jpg")),
+            SizedBox(height: 30.0),
+            Image(
+              image: AssetImage("images/34.jpg"),
+            ),
+            Container(
+              margin: EdgeInsets.all(10.0),
+              child: Text(
+                "In 2019-20, we used 88% percent of our total funds for programs that benefit children. Every penny you contribute for your sponsored child goes towards the cause of his/her education and development.",
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(height: 10.0),
             Container(
               margin: EdgeInsets.fromLTRB(0, 20.0, 0, 0),
               child: Text(
@@ -147,6 +289,30 @@ class SponsorPage extends StatelessWidget {
               ),
             ),
             Container(
+              margin: EdgeInsets.all(10.0),
+              child: Text(
+                "3. Also, you can keep in touch constantly with your child through letters and personal visits that will be coordinated by our Sponsorship Department.",
+                textAlign: TextAlign.center,
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 20.0, 0, 0),
+              child: Text(
+                "COMMUNICATION MATERIAL SPONSOR WILL RECEIVE",
+                style:
+                    TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: 15.0,
+              width: 200.0,
+              child: Divider(
+                color: Colors.red,
+              ),
+            ),
+            Image(image: AssetImage("images/31.jpg")),
+            Container(
               margin: EdgeInsets.fromLTRB(0, 20.0, 0, 0),
               child: Text(
                 "WHAT YOUR SPONSORED CHILD GETS?",
@@ -162,15 +328,15 @@ class SponsorPage extends StatelessWidget {
                 color: Colors.red,
               ),
             ),
+            Image(
+              image: AssetImage("images/33.jpg"),
+            ),
             Container(
               margin: EdgeInsets.all(10.0),
               child: Text(
                 '''1. Good quality education and care during their formative years.
-
 2. Protection from child labour, abuse and any kind exploitation.
-
 3. Additional gifts that you send.
-
 4. Opportunity to overcome poverty and be the agents of change as they grow up.''',
                 textAlign: TextAlign.center,
               ),
@@ -202,7 +368,8 @@ class SponsorPage extends StatelessWidget {
               color: Colors.green,
               margin: EdgeInsets.all(10.0),
               child: new InkWell(
-                onTap: () => launch("https://www.deepalaya.org/sponsors"),
+                onTap: () =>
+                    launch("https://pages.razorpay.com/sponsorshipindia"),
                 child: ListTile(
                   title: Text('SPONSOR A CHILD',
                       style: TextStyle(
@@ -236,3 +403,34 @@ class SponsorPage extends StatelessWidget {
       ),'''
       
 */
+/*Column(
+            children: <Widget>[
+              Container(
+              color: Colors.green,
+              margin: EdgeInsets.fromLTRB(10.0, 15.0, 10.0, 0),
+              child: Text(
+                "SPONSOR A CHILD WITH DEEPALAYA",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: 15.0,
+              width: 200.0,
+              child: Divider(
+                color: Colors.red,
+              ),
+            ),
+            Container(
+              color: Colors.green,
+              child: Text(
+                "As Deepalaya\’s education activities gathered pace, we were in a dilemma. The need was huge but the hands were limited. This led to the invention of the sponsorship programme based on the concept of \“Each One, Teach One\". \“Sponsor-A-Child\” establishes a one-to-one relationship between the sponsored child and sponsor parent. By sponsoring a child with Deepalaya – one of the Best NGOs in India, you can bring a significant change by educating a child in society.",
+                textAlign: TextAlign.center,
+              ),
+            ),
+            ],),
+            
+             */

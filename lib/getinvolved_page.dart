@@ -8,6 +8,17 @@ class GetinvolvedPage extends StatelessWidget {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("Get Involved"),
+        actions: <Widget>[
+          new RaisedButton(
+            color: Colors.red,
+            child: new Text('Donate',
+                style: new TextStyle(fontSize: 17.0, color: Colors.white)),
+            onPressed: () {
+              Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) => new DonationPage()));
+            },
+          )
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -67,7 +78,8 @@ class GetinvolvedPage extends StatelessWidget {
               child: Card(
                 margin: EdgeInsets.all(10.0),
                 child: new InkWell(
-                  onTap: () => launch("https://www.deepalaya.org/donatenow"),
+                  onTap: () =>
+                      launch("https://pages.razorpay.com/deepalayaindia"),
                   child: ListTile(
                     title: Image(
                         image:
@@ -112,7 +124,7 @@ class GetinvolvedPage extends StatelessWidget {
               child: Card(
                 margin: EdgeInsets.all(10.0),
                 child: new InkWell(
-                  onTap: () => launch("https://www.deepalaya.org/get-involved"),
+                  onTap: () => launch("https://www.deepalaya.org/shop.php"),
                   child: ListTile(
                     title: Image(
                         image:
@@ -158,7 +170,7 @@ class GetinvolvedPage extends StatelessWidget {
                 margin: EdgeInsets.all(10.0),
                 child: new InkWell(
                   onTap: () =>
-                      launch("https://www.deepalaya.org/celebrate-with-us"),
+                      launch("https://www.deepalaya.org/celebrate-with-us.php"),
                   child: ListTile(
                     title: Image(
                         image:
@@ -203,7 +215,7 @@ class GetinvolvedPage extends StatelessWidget {
               child: Card(
                 margin: EdgeInsets.all(10.0),
                 child: new InkWell(
-                  onTap: () => launch("https://www.deepalaya.org/csr"),
+                  onTap: () => launch("https://www.deepalaya.org/csr.php"),
                   child: ListTile(
                     title: Image(
                         image:
@@ -248,7 +260,8 @@ class GetinvolvedPage extends StatelessWidget {
               child: Card(
                 margin: EdgeInsets.all(10.0),
                 child: new InkWell(
-                  onTap: () => launch("https://www.deepalaya.org/volunteer"),
+                  onTap: () =>
+                      launch("https://www.deepalaya.org/volunteer.php"),
                   child: ListTile(
                     title: Image(
                         image:
@@ -294,7 +307,7 @@ class GetinvolvedPage extends StatelessWidget {
                 margin: EdgeInsets.all(10.0),
                 child: new InkWell(
                   onTap: () => launch(
-                      "https://www.deepalaya.org/deepalaya-social-media"),
+                      "https://www.deepalaya.org/deepalaya-social-media.php"),
                   child: ListTile(
                     title: Image(
                         image:
@@ -339,7 +352,8 @@ class GetinvolvedPage extends StatelessWidget {
               child: Card(
                 margin: EdgeInsets.all(10.0),
                 child: new InkWell(
-                  onTap: () => launch("https://www.deepalaya.org/internship"),
+                  onTap: () =>
+                      launch("https://www.deepalaya.org/internship.php"),
                   child: ListTile(
                     title: Image(
                         image:
@@ -384,7 +398,7 @@ class GetinvolvedPage extends StatelessWidget {
               child: Card(
                 margin: EdgeInsets.all(10.0),
                 child: new InkWell(
-                  onTap: () => launch("https://www.deepalaya.org/job"),
+                  onTap: () => launch("https://www.deepalaya.org/job.php"),
                   child: ListTile(
                     title: Image(
                         image:

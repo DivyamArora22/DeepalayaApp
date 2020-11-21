@@ -29,7 +29,7 @@ class _DonationPageState extends State<DonationPage> {
 
   void openCheckout() async {
     var options = {
-      'key': 'rzp_test_qj7evuGknxkm5c',
+      'key': 'rzp_test_KD5ntFCWEZZAsC',
       'amount': totalAmount * 100,
       'name': 'Deepalaya',
       'description': 'Test Payment',
@@ -73,7 +73,7 @@ class _DonationPageState extends State<DonationPage> {
             child: TextField(
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                  hintText: 'Please enter the emount to donate'),
+                  hintText: 'Please enter the amount to donate'),
               onChanged: (value) {
                 setState(() {
                   totalAmount = num.parse(value);

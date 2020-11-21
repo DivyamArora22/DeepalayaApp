@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'donation_page.dart';
 
 class ContactUsPage extends StatelessWidget {
   @override
@@ -11,17 +12,27 @@ class ContactUsPage extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: Icon(
-              Icons.arrow_back,
-              color: Colors.white,
+            leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(
+                Icons.arrow_back,
+                color: Colors.white,
+              ),
             ),
-          ),
-          title: Text('Contact Us'),
-        ),
+            title: Text('Contact Us'),
+            actions: <Widget>[
+              new RaisedButton(
+                color: Colors.red,
+                child: new Text('Donate',
+                    style: new TextStyle(fontSize: 17.0, color: Colors.white)),
+                onPressed: () {
+                  Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (BuildContext context) => new DonationPage()));
+                },
+              )
+            ]),
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
