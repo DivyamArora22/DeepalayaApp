@@ -23,11 +23,15 @@ This mobile application is developed using Flutter for Deepalaya, an NGO, to fac
 
 ## Screenshots
 
-![Screenshot 1](link-to-screenshot1.png)
-*Caption for Screenshot 1*
+<img src="assets/launchpage.png" alt="Launch Screen" width="300"/>
+Launch Screen
 
-![Screenshot 2](link-to-screenshot2.png)
-*Caption for Screenshot 2*
+<img src="assets/homepage.png" alt="Home Page" width="300"/>
+Home Page
+
+<img src="assets/menu.png" alt="Menu Page" width="300"/>
+Menu Page
+
 
 ## Getting Started
 
